@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eletro Kurumin - Gestão de Estoque</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TELA DE LOGIN -->
+  <div id="login-container" class="card">
+    <h2>Eletro Kurumin</h2>
+    <p>Insira as suas credenciais para aceder</p>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="E-mail (admin@kurumin.com)" required>
+      <input type="password" id="login-senha" placeholder="Senha (123456)" required>
+      <button type="submit">Entrar</button>
+    </form>
+    <div id="login-erro" class="error-msg"></div>
+  </div>
+
+  <!-- PAINEL PRINCIPAL -->
+  <div id="app-container" class="hidden">
+    <header>
+      <h1>Eletro Kurumin - Painel de Controle</h1>
+      <button id="btn-logout" class="btn-danger">Sair</button>
+    </header>
+
+    <main>
+      <!-- FORMULÁRIO DE CADASTRO -->
+      <section class="card">
+        <h3>Cadastrar / Editar Componente</h3>
+        <form id="componente-form">
+          <input type="hidden" id="comp-id">
+          
+          <div class="form-group">
+            <input type="text" id="comp-nome" placeholder="Nome do Componente" required>
+            <input type="number" id="comp-categoria" placeholder="ID Categoria" value="1" required>
+          </div>
+
+          <div class="form-group">
+            <input type="number" step="0.01" id="comp-preco" placeholder="Preço (R$)" required>
+            <input type="number" id="comp-qtd" placeholder="Quantidade em Estoque" required>
+          </div>
+
+          <textarea id="comp-desc" placeholder="Descrição do componente"></textarea>
+
+          <div class="btn-actions">
+            <button type="submit" id="btn-salvar">Salvar Componente</button>
+            <button type="button" id="btn-cancelar" class="hidden">Cancelar Edição</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- RELATÓRIO E LISTA DE COMPONENTES -->
+      <section class="card">
+        <div class="header-section">
+          <h3>Lista de Componentes</h3>
+          <div id="resumo-estoque" class="badge-info">
+            Valor Total do Estoque: R$ <span id="valor-total-estoque">0.00</span>
+          </div>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Preço</th>
+              <th>Estoque</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-componentes">
+            <!-- Linhas inseridas via JS -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html> 
