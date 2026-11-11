@@ -51,28 +51,4 @@ CREATE TABLE movimentacao (
 
 -- Categoria inicial obrigatória
 INSERT INTO categoria (id_categoria, nome, descricao) VALUES (1, 'Geral', 'Categoria padrao');
-⚙️ Como Executar o Projeto
-1. Iniciar o Banco de Dados
-Abre o XAMPP e inicia o MySQL.
 
-Executa o script SQL fornecido acima no teu cliente MySQL (ex: HeidiSQL) para criar a base de dados mydb e as tabelas.
-
-2. Iniciar o Backend
-Navega até a pasta kurumin backend:
-
-Bash
-cd "kurumin backend"
-Instala as dependências (se necessário) e inicia o servidor:
-
-Bash
-npm install
-node server.js
-(O servidor rodará na porta 3000)
-
-3. Iniciar o Frontend
-Abre o ficheiro index.html dentro da pasta kurumin frontend diretamente no teu navegador ou utiliza a extensão Live Server no VS Code.
-
-🌐 Credenciais de Acesso (Login)
-E-mail: admin@kurumin.com
-
-Senha: 123456
