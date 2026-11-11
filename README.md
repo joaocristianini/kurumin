@@ -1,6 +1,6 @@
 # ⚡ Eletro Kurumin - Sistema de Gestão de Estoque
 
-O **Eletro Kurumin** é uma aplicação Full-Stack para gestão e controlo de estoque de componentes eletrónicos. O sistema permite cadastrar, listar, editar e remover componentes, além de gerir categorias e movimentações de estoque.
+O **Eletro Kurumin** é uma aplicação Full-Stack para gestão e controle de estoque de componentes eletrónicos. O sistema permite cadastrar, listar, editar e remover componentes, além de gerir categorias e movimentações de estoque.
 
 ---
 
